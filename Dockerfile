@@ -11,4 +11,4 @@ COPY README.md $APP
 # Install dependencies
 RUN pip install -r $APP/requirements.txt
 
-CMD exec gunicorn --bind :$PORT --workers 5 --threads 8 app:app
+CMD exec gunicorn --bind :$PORT --workers 5 --threads 8 main:app
